@@ -1,0 +1,25 @@
+.buttonRow {
+  position: relative;
+  white-space: nowrap;
+  overflow-x: auto;
+  margin-inline: -20px;
+  margin-bottom: -20px;
+  padding: 20px;
+}
+
+/* .buttonRow::-webkit-scrollbar {
+  height: 13px;
+}
+.buttonRow::-webkit-scrollbar-track {
+  background: #ccc;
+}
+.buttonRow::-webkit-scrollbar-thumb {
+  background-color: #777;
+  border-radius: 20px;
+} */
+
+@media (max-width: 700px) {
+  .buttonRow {
+    width: 300px;
+  }
+}

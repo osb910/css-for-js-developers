@@ -18,6 +18,7 @@ const App: FC = () => {
 
 const Main = styled.main`
   padding: 64px 32px;
+  font-family: 'Raleway';
 `;
 
 export default App;

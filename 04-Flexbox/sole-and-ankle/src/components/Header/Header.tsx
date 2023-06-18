@@ -6,13 +6,13 @@ import Logo from '../Logo';
 import SuperHeader from '../SuperHeader';
 
 const Header: FC = () => {
-  // Our site features two visual headers, but they should be
-  // grouped semantically as a single header.
   return (
     <header>
       <SuperHeader />
       <MainHeader>
-        <Logo />
+        <Side>
+          <Logo />
+        </Side>
         <Nav>
           <NavLink href='/sale'>Sale</NavLink>
           <NavLink href='/new'>New&nbsp;Releases</NavLink>
@@ -21,17 +21,30 @@ const Header: FC = () => {
           <NavLink href='/kids'>Kids</NavLink>
           <NavLink href='/collections'>Collections</NavLink>
         </Nav>
+        <Side />
       </MainHeader>
     </header>
   );
 };
 
 const MainHeader = styled.div`
-  padding: 0 32px;
+  padding-block: 1.25em;
+  padding-inline: 2em;
   border-bottom: 1px solid ${COLORS.gray[300]};
+  display: flex;
+  align-items: baseline;
+  font-family: 'Raleway';
 `;
 
-const Nav = styled.nav``;
+const Nav = styled.nav`
+  display: flex;
+  gap: 3em;
+  margin-inline: 3em;
+`;
+
+const Side = styled.div`
+  flex: 1;
+`;
 
 const NavLink = styled.a`
   font-size: 1.125rem;

@@ -6,13 +6,16 @@ import VisuallyHidden from '../VisuallyHidden';
 import Icon from '../Icon';
 
 interface SearchInputProps {
-  label: string;
+  label?: string;
 }
 
-const SearchInput: FC<SearchInputProps> = ({label, ...delegated}) => {
+const SearchInput: FC<SearchInputProps> = ({
+  label = 'Search',
+  ...delegated
+}) => {
   return (
     <Label>
-      <VisuallyHidden>Search</VisuallyHidden>
+      <VisuallyHidden>{label}</VisuallyHidden>
       <Input {...delegated} placeholder='Search…' />
       <SearchIcon id='search' strokeWidth={1} size={16} />
     </Label>

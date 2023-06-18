@@ -5,18 +5,14 @@ const hiddenStyles = {
   position: 'absolute',
   overflow: 'hidden',
   clip: 'rect(0 0 0 0)',
-  height: 1,
-  width: 1,
+  blockSize: 1,
+  inlineSize: 1,
   margin: -1,
   padding: 0,
   border: 0,
 };
 
-interface VisuallyHiddenProps {
-  children: ReactNode;
-}
-
-const VisuallyHidden: FC<VisuallyHiddenProps> = ({children}) => (
+const VisuallyHidden: FC<{children: ReactNode}> = ({children}) => (
   <span style={hiddenStyles}>{children}</span>
 );
 

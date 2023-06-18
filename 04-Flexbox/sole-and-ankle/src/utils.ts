@@ -7,14 +7,10 @@
  */
 import differenceInDays from 'date-fns/differenceInDays';
 
-export function formatPrice(price) {
-  return `$${price / 100}`;
-}
+export const formatPrice = (price: number) => `$${price / 100}`;
 
-export function pluralize(string, num) {
-  return num === 1 ? `1 ${string}` : `${num} ${string}s`;
-}
+export const pluralize = (string: string, num: number) =>
+  num === 1 ? `1 ${string}` : `${num} ${string}s`;
 
-export function isNewShoe(releaseDate) {
-  return differenceInDays(new Date(), releaseDate) < 30;
-}
+export const isNewShoe = (releaseDate: Date) =>
+  differenceInDays(new Date(), releaseDate) < 30;

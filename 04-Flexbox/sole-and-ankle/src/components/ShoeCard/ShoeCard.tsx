@@ -65,11 +65,6 @@ const Wrapper = styled.article`
 
 const ImageWrapper = styled.div<{variant: string}>`
   position: relative;
-  background-color: ${COLORS.gray[300]};
-  border-start-start-radius: 16px;
-  border-start-end-radius: 16px;
-  border-end-start-radius: 4px;
-  border-end-end-radius: 4px;
 
   &::before {
     ${({variant}) =>
@@ -100,6 +95,10 @@ const ImageWrapper = styled.div<{variant: string}>`
 
 const Image = styled.img`
   inline-size: 100%;
+  border-start-start-radius: 16px;
+  border-start-end-radius: 16px;
+  border-end-start-radius: 4px;
+  border-end-end-radius: 4px;
 `;
 
 const Row = styled.div`

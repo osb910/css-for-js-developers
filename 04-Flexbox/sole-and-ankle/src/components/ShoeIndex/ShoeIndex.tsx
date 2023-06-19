@@ -40,20 +40,39 @@ const ShoeIndex: FC<ShoeIndexProps> = ({sortId, setSortId}) => {
           <Breadcrumbs.Crumb href='/sale'>Sale</Breadcrumbs.Crumb>
           <Breadcrumbs.Crumb href='/sale/shoes'>Shoes</Breadcrumbs.Crumb>
         </Breadcrumbs>
-        <Spacer size={42} />
         <ShoeSidebar />
       </LeftColumn>
     </Wrapper>
   );
 };
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 4em;
+`;
 
-const LeftColumn = styled.div``;
+const LeftColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2.25em;
+`;
 
-const MainColumn = styled.div``;
+const MainColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  flex: 1;
+`;
 
-const Header = styled.header``;
+const Header = styled.header`
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex: 1;
+`;
 
 const Title = styled.h2`
   font-size: 1.5rem;

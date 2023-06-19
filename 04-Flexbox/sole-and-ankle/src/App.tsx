@@ -17,7 +17,7 @@ const App: FC = () => {
 };
 
 const Main = styled.main`
-  padding: 64px 32px;
+  padding: 2em 1.5em;
   font-family: 'Raleway';
 `;
 

@@ -29,7 +29,7 @@ const Header: FC = () => {
 
 const MainHeader = styled.div`
   padding-block: 1.25em;
-  padding-inline: 2em;
+  padding-inline: 1.5em;
   border-bottom: 1px solid ${COLORS.gray[300]};
   display: flex;
   align-items: baseline;

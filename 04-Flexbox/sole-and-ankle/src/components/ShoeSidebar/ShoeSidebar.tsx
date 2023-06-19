@@ -23,7 +23,11 @@ const Sidebar: FC = () => {
   );
 };
 
-const Wrapper = styled.aside``;
+const Wrapper = styled.aside`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+`;
 
 const Link = styled.a`
   display: block;
